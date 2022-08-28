@@ -15,7 +15,7 @@ var tutor_div = [
   '<div class="card mt-3"><div class="card-header">Biology</div><div class="card-body"><h5 class="card-title">Chinquepin, Anise</h5><p class="card-text">UTC+9 | 7:30 - 10:00 | Thursday - Friday & Sunday</p><a href="#" class="btn btn-primary" onclick="tutor_5()">Select as Tutor</a></div></div>',
   '<div class="card mt-3"><div class="card-header">History</div><div class="card-body"><h5 class="card-title">Phlox, Alder</h5><p class="card-text">UTC-5 | 6:30 - 9:00 | Friday - Sunday</p><a href="#" class="btn btn-primary" onclick="tutor_6()">Select as Tutor</a></div></div>'
 ]
-
+/**
 var tutee_div = [
   '<div class="card mt-3"><div class="card-header">History</div><div class="card-body"><h5 class="card-title">Asclepias, Briar</h5><p class="card-text">UTC+8 | 7:00 - 9:00 | Monday - Wednesday</p><a href="#" class="btn btn-primary" onclick="tutee_1()">Select as Tutee</a></div></div>',
   '  <div class="card mt-3"><div class="card-header">ELA</div><div class="card-body"><h5 class="card-title">Camphor, Vervain</h5><p class="card-text">UTC-1 | 19:30 - 21:00 | Thursday - Sunday</p><a href="#" class="btn btn-primary" onclick="tutee_2()">Select as Tutee</a></div></div>',
@@ -24,7 +24,7 @@ var tutee_div = [
   '   <div class="card mt-3"><div class="card-header">Geometry  </div><div class="card-body"><h5 class="card-title">Lithops, Carya</h5><p class="card-text">UTC | 9:00 - 10:30 | Friday & Sunday - Monday</p><a href="#" class="btn btn-primary" onclick="tutee_5()">Select as Tutee</a></div></div>',
   '<div class="card mt-3">    <div class="card-header">    Speech/Debate  </div>  <div class="card-body"><h5 class="card-title">Puccoon, Basil</h5>  <p class="card-text">UTC-6 | 16:00 - 19:00 | Friday - Saturday</p><a href="#" class="btn btn-primary" onclick="tutee_6()">Select as Tutee</a></div></div>'
 ]
-
+**/
 
 var tutor_subject = [
   "English Foreign Language",
@@ -34,7 +34,7 @@ var tutor_subject = [
   "Biology",
   "History",
 ]
-
+/**
 var tutee_subject = [
   "History",
   "ELA",
@@ -43,7 +43,7 @@ var tutee_subject = [
   "Geometry",
   "Speech/Debate",
 ]
-
+**/
 var tutor_timezone = [
   1,
   0,
@@ -146,14 +146,14 @@ var filterUsers = function() {
   var filterIDtutor4 = 0
   var filterIDtutor5 = 0
   var filterIDtutor6 = 0
-
+/**
   var filterIDtutee1 = 0
   var filterIDtutee2 = 0
   var filterIDtutee3 = 0
   var filterIDtutee4 = 0
   var filterIDtutee5 = 0
   var filterIDtutee6 = 0
-
+**/
   {
     if (addSubject == tutor_subject[0]) {
       filterIDtutor1 += 5
@@ -190,7 +190,7 @@ var filterUsers = function() {
   }
 }
 
-
+/**
 {
   if (addSubject == tutee_subject[0]) {
     filterIDtutee1 += 5
@@ -226,7 +226,7 @@ if (addSubject == tutee_subject[5]) {
   filterIDtutee6 += 5
 }
 }
-
+**/
 var tutorTimes = [
   filterIDtutor1,
   filterIDtutor2,
@@ -235,7 +235,7 @@ var tutorTimes = [
   filterIDtutor5,
   filterIDtutor6
 ]
-
+/**
 var tuteeTimes = [
   filterIDtutee1,
   filterIDtutee2,
@@ -244,7 +244,7 @@ var tuteeTimes = [
   filterIDtutee5,
   filterIDtutee6
 ]
-
+**/
 var largest = tutorTimes[0];
 
 for (var i = 0; i < tutorTimes.length; i++) {
@@ -259,7 +259,7 @@ if (tutorTimes.indexOf(largest) !== -1 && largest >= 5) {
   console.log(recT)
   document.getElementById("recommended").innerHTML = tutor_div[recT]
 }
-
+/**
 var largest2 = tuteeTimes[0];
 
 for (var i = 0; i < tuteeTimes.length; i++) {
@@ -274,7 +274,7 @@ if (tuteeTimes.indexOf(largest2) !== -1 && largest2 >= 5) {
   console.log(recT2)
   document.getElementById("recommended").innerHTML = tutee_div[recT2]
 }
-
+**/
 
 
 /**
@@ -327,7 +327,7 @@ var tutor_5 = function() {
 var tutor_6 = function() {
   document.getElementById("my_tutors").innerHTML = '<div class="card mt-3"><div class="card-header">History</div><div class="card-body"><h5 class="card-title">Phlox, Alder</h5><p class="card-text">UTC-5 | 6:30 - 9:00 | Friday - Sunday</p><a href="#" class="btn btn-primary" onclick="cancel()">Cancel</a></div></div>'
 }
-
+/**
 var tutee_1 = function() {
   document.getElementById("my_tutors").innerHTML = '  <div class="card mt-3"><div class="card-header">History</div><div class="card-body"><h5 class="card-title">Asclepias, Briar</h5><p class="card-text">UTC+8 | 7:00 - 9:00 | Monday - Wednesday</p><a href="#" class="btn btn-primary" onclick="cancel()">Cancel</a><a href="#" class="btn btn-primary ms-2" onclick="" data-bs-toggle="modal" data-bs-target="#commServModal">Collect Community Service</a></div></div>'
 }
@@ -346,3 +346,4 @@ var tutee_5 = function() {
 var tutee_6 = function() {
   document.getElementById("my_tutors").innerHTML = ' <div class="card mt-3">    <div class="card-header">    Speech/Debate  </div>  <div class="card-body"><h5 class="card-title">Puccoon, Basil</h5>  <p class="card-text">UTC-6 | 16:00 - 19:00 | Friday - Saturday</p><a href="#" class="btn btn-primary" onclick="cancel()">Cancel</a><a href="#" class="btn btn-primary ms-2" onclick="" data-bs-toggle="modal" data-bs-target="#commServModal">Collect Community Service</a></div></div>'
 }
+**/
